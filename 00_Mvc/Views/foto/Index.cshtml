@@ -1,0 +1,63 @@
+﻿@model IEnumerable<_04_Data.Data.foto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.url_foto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_insercion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.categoria.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cliente.login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proveedor.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.url_foto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_insercion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.categoria.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cliente.login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.proveedor.nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,56 @@
+﻿@model _04_Data.Data.cliente_foto
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>cliente_foto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_visionado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_visionado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.me_gusta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.me_gusta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cliente.login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cliente.login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foto.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foto.descripcion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

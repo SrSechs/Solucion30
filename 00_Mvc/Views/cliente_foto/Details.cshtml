@@ -1,0 +1,50 @@
+﻿@model _04_Data.Data.cliente_foto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>cliente_foto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_visionado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_visionado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.me_gusta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.me_gusta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cliente.login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cliente.login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foto.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foto.descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

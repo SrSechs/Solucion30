@@ -1,0 +1,66 @@
+﻿@model _04_Data.Data.foto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>foto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.url_foto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.url_foto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_insercion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_insercion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categoria.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categoria.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cliente.login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cliente.login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.proveedor.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.proveedor.nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
